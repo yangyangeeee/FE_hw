@@ -1,0 +1,40 @@
+Q1. 4. console.text="클릭됨"
+Q2. contains
+Q3. n=1, n=3, n=5
+Q4. 3000
+Q5. appendChild
+Q6.
+Q7.
+const lion = () => {
+	console.log("자바스크립트 마스터를 해보자!");
+};
+lion()
+Q8.
+let isLogin;
+let @@ = true ? false : "환영합니다!" ;
+console.log(@@)
+Q9.
+do {
+	const box = prompt("무엇을 말하고 싶나요?");
+	console.log(box);
+} while (prompt("무엇을 말하고 싶나요?", "끝"))
+Q10.
+while (num<=10) {
+	prompt("숫자를 입력하세요");
+	++count;
+	console.log(
+
+]
+
+Q11.
+Q12.
+const arr1 = ["빨강", "주황", "노랑", "초록"]
+const arr2 = ["파랑", "남색", "보라", "핑크"]
+
+let arr3 = arr1.push("파랑", "남색", "보라", "핑크");
+console.log(arr1);
+
+console.log("노랑")
+Q13.
+Q14.
+Q15.
