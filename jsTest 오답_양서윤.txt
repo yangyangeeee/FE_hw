@@ -1,0 +1,98 @@
+Q1. 1 div.textContent = “클릭됨”
+-> div의 텍스트를 관리하는 코드이기 때문이다.
+
+Q2. includes
+-> 배열에 특정 값이 포함되어 있는지를 확인할 수 있는 메소드이기 때문이다.
+
+Q3. num % 2 === 0
+-> 짝수는 2로 나누었을 때 나머지가 0인 수이기 때문이다.
+
+Q6. textContent = count
+-> 증가된 카운트 수만큼 화면에 표시되기 때문이다.
+
+Q8.    const isLogin = true;
+	alert(isLogin ? "환영합니다!" : "접근 권한이 없습니다.");
+-> isLogin이 T인지 F인지에 따라 다른 출력메세지 창이 떠오르기 때문이다.
+
+Q9.
+do {
+  var input = prompt("무엇을 말하고 싶나요?");
+  alert(input);
+} while (input !== "끝");
+-> input에 "끝"을 입력할 때까지 prompt 창 띄우기를 반복한다.
+
+Q10.
+const input = prompt("숫자를 입력하세요.");
+const num = Number(input);
+
+let sum = 0;
+let i = 1;
+
+while (i <= num) {
+  sum += i;
+  i++;
+}
+
+alert(`1부터 해당값까지의 합은 ${sum}입니다.`);
+-> 입력받은 문자열을 숫자형으로 변형하고, 초기값을 0으로 설정한다. 또한 1부터 num까지 계속해 더하는 것을 반복해야 하므로 이 코드를 적었다.
+
+Q11.
+function randomNum() {
+  return Math.floor(Math.random() * 11);
+}
+
+let arr = [];
+let sum = 0;
+
+for (let i = 0; i < 3; i++) {
+  const num = randomNum();
+  arr.push(num);
+  sum += num;
+  document.write(`${i + 1}번째 랜덤 난수: ${num}<br>`);
+}
+
+document.write(`3개의 합: ${sum}`);
+-> 0~10 사이 난수를 3번 생성해 출력하고, 그 값을 누적하여 총합을 화면에 출력해야 하므로 이 코드를 적었다.
+
+Q12.
+const arr1 = ["빨강", "주황", "노랑", "초록"];
+const arr2 = ["파랑", "남색", "보라", "핑크"];
+
+const combined = arr1.concat(arr2);
+console.log(combined);
+
+console.log(combined[3]);
+
+console.log(combined.slice(4, 9));
+-> 두 배열을 합쳐서 필요한 인덱스 값과 구간을 concat()과 slice()를 이용해 출력하기 위해 이 코드를 적었다.
+
+Q13.
+const startDate = new Date(2025, 4, 2);
+console.log(startDate);
+
+const today = new Date();
+document.write(`오늘 날짜: ${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일<br>`);
+
+const diffTime = today - startDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+document.write(`2025년 5월 2일로부터 ${diffDays}일이 지났습니다.`);
+-> 특정 날짜와 오늘 날짜의 차이를 Date 객체와 시간 계산을 이용해 일 수로 출력한 것이다.
+
+Q14.
+function change() {
+  const nameTag = document.getElementById("name");
+  if (nameTag.innerText === "likelion_1") {
+    nameTag.innerText = "likelion_2";
+  } else if (nameTag.innerText === "likelion_2") {
+    nameTag.innerText = "likelion_3";
+  }
+}
+-> getElementById와 조건문을 이용해 텍스트를 순차적으로 변경해야 하므로 작성했다.
+
+Q15.
+const person = {
+  greet: function(age, name) {
+    alert(`안녕, ${age}살 ${name}!!`);
+  }
+};
+-> 이름과 나이를 인자로 출력하는 함수를 객체의 키로 선언해야 하므로 작성했다.
