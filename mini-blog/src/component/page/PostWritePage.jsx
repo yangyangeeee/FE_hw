@@ -5,7 +5,7 @@ import Button from "../ui/Button";
 import TextInput from "../ui/TextInput";
 import styles from "../page/MainPage.module.css";
 
-export default function PostWritePage() {
+export default function PostWritePage({ setPosts }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const navigate = useNavigate();
@@ -16,8 +16,12 @@ export default function PostWritePage() {
       return;
     }
 
-    console.log("새 글 작성됨: ", { title, content });
-
+    const newPost = {
+      id: Date.now(),
+      title,
+      content,
+    };
+    setPosts((prev) => [...prev, newPost]);
     navigate("/");
   };
 

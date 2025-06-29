@@ -4,9 +4,10 @@ import data from "../../db/data.json";
 import Button from "../ui/Button";
 import styles from "./MainPage.module.css";
 
-export default function Header() {
+export default function MainPage({ posts }) {
   const navigate = useNavigate();
 
+  const allPosts = [...posts, ...data];
   return (
     <>
       <div className={styles.container}>
@@ -25,14 +26,14 @@ export default function Header() {
           </Button>
         </div>
 
-        {data.map((title) => (
-          <div className={styles.postBox} key={title.key}>
+        {allPosts.map((post) => (
+          <div className={styles.postBox} key={post.key}>
             <Link
-              to={`/post/${title.id}`}
-              key={title.id}
+              to={`/post/${post.id}`}
+              key={post.id}
               className={styles.contentTitle}
             >
-              {title.title}
+              {post.title}
             </Link>
           </div>
         ))}

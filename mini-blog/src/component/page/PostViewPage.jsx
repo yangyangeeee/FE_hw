@@ -1,20 +1,19 @@
 import React from "react";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import data from "../../db/data.json";
+// import data from "../../db/data.json";
 import CommentList from "../list/CommentList";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";
 import styles from "../page/MainPage.module.css";
 
-export default function PostViewPage() {
+export default function PostViewPage({ posts }) {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const post = data.find((item) => String(item.id) === id);
-
+  const post = posts.find((item) => String(item.id) === id);
   const [comment, setComment] = useState("");
-  const [comments, setComments] = useState(post.comments || []);
+  const [comments, setComments] = useState(post?.comments ?? []);
 
   const handleAddComment = () => {
     if (comment.trim() !== "") {

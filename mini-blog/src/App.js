@@ -25,17 +25,20 @@
 // export default App;
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import MainPage from "./component/page/MainPage";
 import PostViewPage from "./component/page/PostViewPage";
 import PostWritePage from "./component/page/PostWritePage";
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/post/:id" element={<PostViewPage />} />
-        <Route path="/write" element={<PostWritePage />} />
+        <Route path="/" element={<MainPage posts={posts} />} />
+        <Route path="/post/:id" element={<PostViewPage posts={posts} />} />
+        <Route path="/write" element={<PostWritePage setPosts={setPosts} />} />
       </Routes>
     </BrowserRouter>
   );
