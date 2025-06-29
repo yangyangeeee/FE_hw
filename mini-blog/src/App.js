@@ -26,12 +26,13 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import rawData from "./db/data.json";
 import MainPage from "./component/page/MainPage";
 import PostViewPage from "./component/page/PostViewPage";
 import PostWritePage from "./component/page/PostWritePage";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState([...rawData]);
 
   return (
     <BrowserRouter>

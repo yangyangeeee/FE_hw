@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-// import data from "../../db/data.json";
+import data from "../../db/data.json";
 import CommentList from "../list/CommentList";
 import TextInput from "../ui/TextInput";
 import Button from "../ui/Button";

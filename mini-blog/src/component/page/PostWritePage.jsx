@@ -20,7 +20,9 @@ export default function PostWritePage({ setPosts }) {
       id: Date.now(),
       title,
       content,
+      comments: [],
     };
+
     setPosts((prev) => [...prev, newPost]);
     navigate("/");
   };

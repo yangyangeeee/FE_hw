@@ -7,7 +7,6 @@ import styles from "./MainPage.module.css";
 export default function MainPage({ posts }) {
   const navigate = useNavigate();
 
-  const allPosts = [...posts, ...data];
   return (
     <>
       <div className={styles.container}>
@@ -26,7 +25,7 @@ export default function MainPage({ posts }) {
           </Button>
         </div>
 
-        {allPosts.map((post) => (
+        {posts.map((post) => (
           <div className={styles.postBox} key={post.key}>
             <Link
               to={`/post/${post.id}`}
