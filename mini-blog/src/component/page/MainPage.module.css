@@ -1,0 +1,127 @@
+.container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.title a {
+  text-decoration: none;
+  color: black;
+}
+
+.buttonLoc {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 550px;
+  border-radius: 8px;
+  margin-bottom: 7px;
+}
+
+.buttonDes {
+  border-radius: 5px;
+  border: none;
+  background-color: #ccc;
+  height: 30px;
+  box-shadow: 1px 2px 1px 0px #9c9999;
+}
+
+.inputDes {
+  height: 50px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.contentList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentTitle {
+  display: flex;
+  margin-bottom: 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  justify-content: flex-start;
+}
+
+.postBox {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 600px;
+  height: 45px;
+  padding: 25px 15px 5px 15px;
+  margin: 7px 0;
+  background-color: white;
+}
+
+.postTitle {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.postContent {
+  font-size: 14px;
+  color: #555;
+}
+
+.postView {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.postviewtitle {
+  font-weight: 500;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.commentItem {
+  border: 1px solid #ccc;
+  padding: 6px 24px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.newcomment {
+  max-width: 650px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.titleInput {
+  width: 600px;
+  height: 50px;
+}
+
+.contentInput {
+  width: 600px;
+  height: 400px;
+}
