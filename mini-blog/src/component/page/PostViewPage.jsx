@@ -18,7 +18,11 @@ export default function PostViewPage() {
 
   const handleAddComment = () => {
     if (comment.trim() !== "") {
-      setComments([...comments, comment]);
+      const newComment = {
+        id: Date.now(),
+        content: comment,
+      };
+      setComments([...comments, newComment]);
       setComment("");
     }
   };

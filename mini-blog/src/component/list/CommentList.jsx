@@ -5,7 +5,7 @@ function CommentList({ comments }) {
   return (
     <div className="commentList">
       {comments.map((c, index) => (
-        <CommentListItem key={index} comment={c} />
+        <CommentListItem key={c.id || index} comment={c} />
       ))}
     </div>
   );
